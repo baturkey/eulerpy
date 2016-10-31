@@ -52,8 +52,7 @@ num_str = "73167176531330624919225119674426574742355349194934" +\
 max = 0
 
 for x in xrange(987):
-    sub = num_str[x:x+13]
-    product = reduce(lambda x, y: int(x)*int(y), list(sub))
+    product = reduce(lambda x, y: int(x)*int(y), list(num_str[x:x+13]))
     if product > max:
         max = product
 print max

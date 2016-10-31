@@ -18,7 +18,7 @@ max = 0
 for i in range(99, 1000):
     for j in range(99, 1000):
         product = i * j
-        if(product > max and is_palindrome(product)):
+        if product > max and is_palindrome(product):
             max = product;
 print max
         
