@@ -15,3 +15,12 @@ What is the total of all the name scores in the file?
 """
 
 
+f = open("resources/names.txt", "r")
+lines = sorted(map(lambda x: x.replace("\"", ""), f.readline().split(",")))
+f.close()
+
+total = 0
+for x in xrange(0, len(lines)):
+    total += (x+1) * reduce(lambda x, y: x + y, map(lambda x: ord(x) - 64, list(lines[x])))
+
+print total
