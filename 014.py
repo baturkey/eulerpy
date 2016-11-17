@@ -56,4 +56,3 @@ for x in xrange(1, 1000000):
         max = length
         num = x
 print num
-
